@@ -1,6 +1,159 @@
 ﻿@page "/messages"
-<h3>Messages</h3>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            height: 100vh;
+        }
 
-@code {
+        .app-container {
+            width: 84vw;
+            height: 960px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
 
-}
+        .header {
+            background-color: #3b5998;
+            width:84vw;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .messages-area {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f1f1f1;
+        }
+
+        .messageRe {
+            background-color: #d1e7ff;
+            align-self: flex-end;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .received {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+        }
+
+        .input-area {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+        }
+
+        #send-btn {
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+
+            #send-btn:hover {
+                background-color: #2d4373;
+            }
+
+        .app-container .messages-area .messageSe {
+            margin-left:67vw;
+            border:none;
+            width: 280px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #cfcccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h2>Chat with John</h2>
+        </div>
+
+        <!-- Message Area -->
+        <div class="messages-area">
+            <div class="messageRe">
+                <p>Hello! How are you?</p>
+            </div>
+            <div class="messageSe">
+                <p>I'm good, thanks! How about you?</p>
+            </div>
+            <div class="messageRe">
+                <p>I'm doing bad</p>
+            </div>
+            <div class="messageRe">
+                <p>Life is not so good for me</p>
+            </div>
+            <div class="messageRe">
+                <p>Awwww</p>
+            </div>
+            <div class="messageSe">
+                <p>What i can't understand you'</p>
+            </div>
+            <div class="messageRe">
+                <p>i said im not felling well</p>
+            </div>
+            <div class="messageSe">
+                <p>do you want me to get something that you want</p>
+            </div>
+            <div class="messageRe">
+                <p>no need i just need to rest well</p>
+            </div>
+            <div class="messageSe">
+                <p>oh ok just take care your self</p>
+            </div>
+            <div class="messageRe">
+                <p>Hmmmmm i guess ill try</p>
+            </div>
+            <div class="messageSe">
+                <p>not try do it</p>
+            </div>
+            <div class="messageRe">
+                <p>ok ill do it</p>
+            </div>
+            <div class="messageSe">
+                <p>oh that good when you feeling well agian lets drink</p>
+            </div>
+            <div class="messageRe">
+                <p>ok ok like to todo that</p>
+            </div>
+            <div class="messageSe">
+                <p>ok bye</p>
+            </div>
+            <!-- More messages will go here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" placeholder="Type a message..." id="message-input">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+</body>
+
+
