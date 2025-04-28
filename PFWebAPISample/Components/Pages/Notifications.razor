@@ -1,6 +1,166 @@
 ﻿@page "/notifications"
-<h3>Notifications</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+    <style>
 
-@code {
+        body {
+            background: #6499f5;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
 
-}
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+            .header h2 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+        .tabs span {
+            font-size: 14px;
+            margin-left: 12px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .tabs .active {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .notification {
+            display: flex;
+            align-items: flex-start;
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .icon {
+            font-size: 20px;
+            margin-right: 12px;
+            margin-top: 4px;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+            .text p {
+                margin: 0;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .text span {
+                font-size: 12px;
+                color: gray;
+            }
+
+        .time {
+            font-size: 11px;
+            color: gray;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .date-divider {
+            text-align: center;
+            font-size: 11px;
+            color: gray;
+            padding: 8px 0;
+            background: #f9fafb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Notification</h2>
+            <div class="tabs">
+                <span class="active">All</span>
+                <span>Mentions</span>
+                <span>Unread</span>
+            </div>
+
+        </div>
+
+        <div class="notification">
+            <div class="icon">📄</div>
+            <div class="text">
+                <p>Published Google Business Listing</p>
+                <span>Binselteller tech • By Eric Ancheta • For 2 locations</span>
+            </div>
+            <div class="time">10 mins ago</div>
+        </div>
+
+        <div class="notification">
+            <div class="icon">🧑‍💼</div>
+            <div class="text">
+                <p>Meeting with a customer coming up</p>
+                <span>Antares Beauty Care • By Eric Ancheta</span>
+            </div>
+            <div class="time">10 mins ago</div>
+        </div>
+
+        <div class="date-divider">3 Jan 2025</div>
+
+        <div class="notification">
+            <div class="icon">👤</div>
+            <div class="text">
+                <p>The invited team member joined platform</p>
+                <span>Team member - Eric Ancheta</span>
+            </div>
+            <div class="time">12:12 AM</div>
+        </div>
+
+        <div class="notification">
+            <div class="icon">💬</div>
+            <div class="text">
+                <p>Review Responded</p>
+                <span>Antares Beauty Care • By Chandler Bing • For 4 locations</span>
+            </div>
+            <div class="time">12:12 AM</div>
+        </div>
+
+        <div class="notification">
+            <div class="icon">🆕</div>
+            <div class="text">
+                <p>New user created for the account</p>
+                <span>SalCare • By Tammy G</span>
+            </div>
+            <div class="time">12:12 AM</div>
+        </div>
+
+        <div class="notification">
+            <div class="icon">🕒</div>
+            <div class="text">
+                <p>Business hours updated</p>
+                <span>Team member - Marvin H</span>
+            </div>
+            <div class="time">12:12 AM</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
